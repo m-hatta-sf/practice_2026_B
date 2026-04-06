@@ -12,23 +12,29 @@
 
     <header class="site-header">
         <div class="header-container">
-            <div class="logo">EcoBites</div>
+            <div class="logo">
+                <img src="Gemini_Generated_Image_43zob743zob743zo.jpeg" alt="EcoBites ロゴマーク" class="logo-mark">
+                EcoBites
+            </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="#about">概要</a></li>
+                    <li><a href="#about">会社情報</a></li>
                     <li><a href="#business">事業内容</a></li>
-                    <li><a href="#members">メンバー</a></li>
+                    <li><a href="#members">メンバー会社</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
+  <section class="hero">
         <div class="hero-content">
-            <p class="tagline">冷たいのは温度だけ。地球には、どこまでも温かい。</p>
+            <h2 class="catch-copy">
+                冷たいのは温度だけ。<br>
+                地球には、どこまでも温かい。
+            </h2>
         </div>
     </section>
-
+    
     <section id="about" class="section about">
         <div class="container">
             <h2>About Us</h2>
@@ -36,19 +42,27 @@
         </div>
     </section>
 
-    <section id="business" class="section business">
-        <div class="container">
-            <h2>Business</h2>
-            <div class="grid">
-                <div class="card">
+<section id="business" class="section business">
+    <div class="container">
+        <h2 class="section-title">Business</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=600" alt="Online Shopping Laptop" class="card-img">
+                <div class="card-body">
                     <h3>オンライン販売</h3>
                     <p>独自の冷凍技術で鮮度をキープ。公式ストアから直接お届けします。</p>
                 </div>
-                <div class="card">
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?q=80&w=600" alt="Delicious Fried Gyoza" class="card-img">
+                <div class="card-body">
                     <h3>看板商品：餃子</h3>
                     <p>植物性素材100%。肉厚でジューシーな「エコ・ギョーザ」を展開。</p>
                 </div>
-                <div class="card">
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600" alt="Eco Friendly Soil Earth" class="card-img">
+                <div class="card-body">
                     <h3>環境保全容器</h3>
                     <p>土に還る100%生分解性パッケージを使用し、プラスチックゴミを削減。</p>
                 </div>
@@ -62,13 +76,24 @@
             <div class="member-grid">
                 <div class="member-card">
                     <div class="member-icon">🌱</div>
-                    <h4>Founder</h4>
-                    <p>環境と食の未来を創るプロフェッショナルチーム。</p>
+                    <h4>田村琉依</h4>
+                    <p>誕生日：2004年3月6日魚座</p>
+                    <p>所属：システム１部５グループ２チーム</p>
+                    <p>餃子で環境を豊かにします</p>
                 </div>
                 <div class="member-card">
                     <div class="member-icon">🥟</div>
-                    <h4>Product Design</h4>
-                    <p>「究極のギョーザ」を追求するフードクリエイター。</p>
+                    <h4>前田音佳</h4>
+                    <p>誕生日：2004年1月9日山羊座</p>
+                    <p>所属：システム1部2グループ1チーム</p>
+                    <p>みなさんに世界１美味しい餃子を届けます</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-icon">🧊</div>
+                    <h4>恒川結衣</h4>
+                    <p>誕生日：2003年10月17日天秤座</p>
+                    <p>所属：システム１部１グループ２チーム</p>
+                    <p>餃子を全国の皆さんに届けたいです</p>
                 </div>
             </div>
         </div>
@@ -262,6 +287,7 @@
                 background: rgba(255, 255, 255, 0.95);
                 padding: 15px 0;
                 position: sticky;
+                font-size: 1.5rem;
                 top: 0;
                 z-index: 1000;
                 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -277,9 +303,35 @@
             }
 
             .logo {
-                font-size: 1.5rem;
+                font-size: 2.0rem;
                 font-weight: bold;
                 color: #008c8c;
+            }
+
+            /* ロゴエリア全体のスタイル */
+            .logo-png {
+                display: flex;
+                /* 横並びにする */
+                align-items: center;
+                /* 上下の中央を揃える */
+                gap: 12px;
+                /* ロゴと社名の間の余白 */
+                font-size: 20px;
+                /* 社名のサイズ */
+                font-weight: bold;
+                /* 社名を太字に */
+                color: #333;
+                /* 社名の文字色 */
+            }
+
+            .logo-mark {
+                display: flex;
+                /* 横並びにする */
+                align-items: center;
+                /* 上下の中央を揃える */
+                height: 1.2em;
+                /* 文字の高さの1.2倍にする */
+                width: auto;
             }
 
             .nav ul {
@@ -346,105 +398,192 @@
             }
 
             footer {
-                text-align: center;
-                padding: 20px;
-                background: #333;
-                color: #fff;
-            }
-            /* フッターメニューのリンク（aタグ）に対するデザイン */
-.footer-menu a {
-  color: white;          /* 文字を白色にする */
-  font-weight: bold;     /* 文字を太字にする */
-  text-decoration: none; /* リンク特有の下線を消してスッキリさせる */
-}
-ul {
-  list-style: none; /* この1行だけで「・」が消えます */
-}
-/* フッター全体の設定 */
-.footer {
-  background-color: #f9f8f4; /* 背景色 */
-  padding: 40px 20px;        /* 上下40px、左右20pxの余白 */
-  border-top: 1px solid #e0e0e0; /* 上にうっすら線を入れると引き締まります */
+               background-color: #f9f8f4;
+    padding: 50px 20px 20px;
+    font-family: sans-serif;
+    color: #333;
 }
 
-/* 3つを横並びにする大枠 */
 .footer-container {
-  display: flex;
-  justify-content: space-between; /* 要素を均等に離す */
-  align-items: center;            /* 縦の真ん中で揃える */
-  max-width: 1200px;              /* 全体の最大幅（広めに設定） */
-  margin: 0 auto;                 /* 画面の中央に配置 */
+    display: grid;
+    /* 3列の均等配置 */
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center; /* 縦方向も中央で揃える */
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
 }
 
-/* 左・中央・右の箱を「同じ幅（比率1）」にする魔法のコード */
-/* これを書くことで、中央のメニューがズレずにピッタリ真ん中に来ます */
-.footer-left, .footer-center, .footer-right {
-  flex: 1;
-}
-
-/* --- 左側（ロゴ） --- */
-.footer-left {
-  text-align: left; /* 左寄せ */
-}
-.footer-logo {
-  max-width: 400px; /* ロゴのサイズはお好みで調整 */
-  height: auto;
-}
-
-/* --- 中央（メニュー） --- */
+/* 中央のメニューをど真ん中に配置するための設定 */
 .footer-center {
-  display: flex;
-  justify-content: center; /* 枠の中でさらに中央寄せ */
+    display: flex;
+    justify-content: center;
 }
+
+.footer h3 {
+    color: #728c4a;
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+}
+.footer h3 span {
+    font-size: 13px;
+    font-weight: normal;
+    color: #333;
+    display: block;
+}
+
+.footer-logo {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
 .footer-nav {
-  list-style: none; /* 「・」を消す */
-  padding: 0;
-  margin: 0;
-  display: flex;    /* メニューを横並びに */
-  gap: 30px;        /* メニュー同士の隙間 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-nav li {
+    margin-bottom: 15px;
 }
 .footer-nav a {
-  text-decoration: none; /* 下線を消す */
-  color: #556b2f;        /* 文字色 */
-  font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
 }
 .footer-nav a:hover {
-  opacity: 0.7; /* マウスを乗せたら少し薄くする（おまけ） */
+    color: #728c4a;
 }
 
-/* --- 右側（会社情報） --- */
-.footer-right {
-  text-align: right; /* 右寄せ */
-  color: #333;       /* 文字色 */
-  font-size: 14px;   /* 少し文字を小さく */
-  line-height: 1.6;  /* 行間を少し開ける */
+.footer-info {
+    text-align: right; /* 右側の文字を右端にピシッと揃える */
 }
-.footer-right p {
-  margin: 0 0 5px 0; /* 段落の隙間を調整 */
+.footer-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
 }
-/* フッターのメインレイアウト（変更） */
-.site-footer-inner {
-  display: grid;
-  grid-template-columns: 2fr 3fr 3fr; /* 右側セクションを広く */
-  gap: 2rem;
+.footer-info strong {
+    font-size: 13px;
 }
 
-/* 新しい連絡先セクション */
-.footer-contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.social-icons {
+    display: flex;
+    justify-content: flex-end; /* アイコンも右寄せに */
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.social-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #728c4a;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-.footer-contact-header {
-  color: var(--color-green);
-  font-size: 1.5rem;
-  font-weight: bold;
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #555;
 }
 
-.footer-contact-item {
-  color: var(--color-text-body);
-  font-size: 1rem;
+/* ＝＝＝ スマホ対応（フッター部分のみ） ＝＝＝ */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* スマホの時は縦1列にする */
+        text-align: center;
+    }
+    .footer-info {
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+}
+            
+
+            /* 全体設定 */
+
+/* メインビジュアル：キャッチコピーを大きく、中央寄せ */
+.hero {
+    height: 500px;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                url('https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?q=80&w=1200') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.catch-copy {
+    font-size: 3.5rem; /* 字体を大きく */
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.4; /* 行間の調整 */
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* 文字を見やすく */
+}
+
+/* 事業内容：3列グリッド */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #008c8c;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.card {
+    flex: 1;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden; /* 画像の角を丸めるため */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* 画像の比率を保ちつつ枠いっぱいに表示 */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card h3 {
+    color: #ff7e5f;
+    margin-bottom: 10px;
+}
+
+/* スマホ対応：画面が狭いときは縦並びにする */
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+    }
+    .catch-copy {
+        font-size: 2rem;
+    }
 }
 
         </style>
