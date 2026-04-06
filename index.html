@@ -12,12 +12,15 @@
 
     <header class="site-header">
         <div class="header-container">
-            <div class="logo">EcoBites</div>
+            <div class="logo">
+                <img src="Gemini_Generated_Image_43zob743zob743zo.jpeg" alt="EcoBites ロゴマーク" class="logo-mark">
+                EcoBites
+            </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#business">Business</a></li>
-                    <li><a href="#members">Menbers</a></li>
+                    <li><a href="#about">会社情報</a></li>
+                    <li><a href="#business">事業内容</a></li>
+                    <li><a href="#members">メンバー会社</a></li>
                 </ul>
             </nav>
         </div>
@@ -62,13 +65,18 @@
             <div class="member-grid">
                 <div class="member-card">
                     <div class="member-icon">🌱</div>
-                    <h4>Founder</h4>
-                    <p>環境と食の未来を創るプロフェッショナルチーム。</p>
+                    <h4>Header</h4>
+                    <p>メンバー紹介1</p>
                 </div>
                 <div class="member-card">
                     <div class="member-icon">🥟</div>
-                    <h4>Product Design</h4>
-                    <p>「究極のギョーザ」を追求するフードクリエイター。</p>
+                    <h4>Main Visual</h4>
+                    <p>メンバー紹介2</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-icon">🧊</div>
+                    <h4>Footer</h4>
+                    <p>メンバー紹介3</p>
                 </div>
             </div>
         </div>
@@ -135,14 +143,14 @@
                 /* 社名の文字色 */
             }
 
-            /* ロゴ画像自体のスタイル */
-            .logo-img {
-                height: 40px;
-                /* ヘッダーの高さに合わせて調整 */
+            .logo-mark {
+                display: flex;
+                /* 横並びにする */
+                align-items: center;
+                /* 上下の中央を揃える */
+                height: 1.2em;
+                /* 文字の高さの1.2倍にする */
                 width: auto;
-                /* アスペクト比を維持 */
-                display: block;
-                /* 余計な隙間を消す */
             }
 
             .nav ul {
