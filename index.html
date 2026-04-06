@@ -12,12 +12,15 @@
 
     <header class="site-header">
         <div class="header-container">
-            <div class="logo">EcoBites</div>
+            <div class="logo">
+                <img src="Gemini_Generated_Image_43zob743zob743zo.jpeg" alt="EcoBites ロゴマーク" class="logo-mark">
+                EcoBites
+            </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="#about">概要</a></li>
+                    <li><a href="#about">会社情報</a></li>
                     <li><a href="#business">事業内容</a></li>
-                    <li><a href="#members">メンバー</a></li>
+                    <li><a href="#members">メンバー会社</a></li>
                 </ul>
             </nav>
         </div>
@@ -58,8 +61,30 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section id="members" class="section members">
+        <div class="container">
+            <h2>Members</h2>
+            <div class="member-grid">
+                <div class="member-card">
+                    <div class="member-icon">🌱</div>
+                    <h4>Header</h4>
+                    <p>メンバー紹介1</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-icon">🥟</div>
+                    <h4>Main Visual</h4>
+                    <p>メンバー紹介2</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-icon">🧊</div>
+                    <h4>Footer</h4>
+                    <p>メンバー紹介3</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2026 EcoBites Inc.</p>
@@ -85,6 +110,7 @@
                 background: rgba(255, 255, 255, 0.95);
                 padding: 15px 0;
                 position: sticky;
+                font-size: 1.5rem;
                 top: 0;
                 z-index: 1000;
                 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -100,9 +126,35 @@
             }
 
             .logo {
-                font-size: 1.5rem;
+                font-size: 2.0rem;
                 font-weight: bold;
                 color: #008c8c;
+            }
+
+            /* ロゴエリア全体のスタイル */
+            .logo-png {
+                display: flex;
+                /* 横並びにする */
+                align-items: center;
+                /* 上下の中央を揃える */
+                gap: 12px;
+                /* ロゴと社名の間の余白 */
+                font-size: 20px;
+                /* 社名のサイズ */
+                font-weight: bold;
+                /* 社名を太字に */
+                color: #333;
+                /* 社名の文字色 */
+            }
+
+            .logo-mark {
+                display: flex;
+                /* 横並びにする */
+                align-items: center;
+                /* 上下の中央を揃える */
+                height: 1.2em;
+                /* 文字の高さの1.2倍にする */
+                width: auto;
             }
 
             .nav ul {
