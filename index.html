@@ -100,6 +100,170 @@
     </section>
 
     <footer>
+    <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>フッター完成版</title>
+  <style>
+    /* ＝＝＝ フッター全体の設定 ＝＝＝ */
+    .footer {
+      background-color: #f9f8f4;
+      padding: 50px 20px 20px;
+      font-family: sans-serif;
+      color: #333;
+    }
+
+    /* ＝＝＝ 4列レイアウトの枠組み ＝＝＝ */
+    .footer-container {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.5fr; /* 4列の幅のバランス */
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: start;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 30px;
+    }
+
+    /* 見出し（緑色の文字） */
+    .footer h3 {
+      color: #728c4a;
+      font-size: 16px;
+      margin: 0 0 15px 0;
+      line-height: 1.4;
+    }
+    .footer h3 span {
+      font-size: 13px;
+      font-weight: normal;
+      color: #333;
+      display: block;
+    }
+
+    /* 1列目（左）：ロゴ */
+    .footer-logo {
+      width: 100%;
+      max-width: 200px; /* 必要に応じてサイズ調整 */
+      height: auto;
+    }
+
+    /* 2列目（中央左）：シンプルなメニュー */
+    .footer-nav {
+      list-style: none; /* 「・」を消す */
+      padding: 0;
+      margin: 0;
+    }
+    .footer-nav li {
+      margin-bottom: 15px; /* メニューの縦の隙間を少し広めに */
+    }
+    .footer-nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      font-weight: bold; /* メニューを目立たせるために太字に */
+    }
+    .footer-nav a:hover {
+      color: #728c4a;
+    }
+
+    /* 3列目（中央右）：写真 */
+    .footer-photo {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 4px; /* おまけ：写真の角を少し丸くする */
+    }
+
+    /* 4列目（右）：会社情報 */
+    .footer-info p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0 0 15px 0;
+    }
+    .footer-info strong {
+      font-size: 13px;
+    }
+
+    /* SNSアイコン */
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .social-icon {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-color: #728c4a;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    /* 一番下のコピーライト */
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-col">
+        <img src="Gemini_Generated_Image_43zob743zob743zo.jpeg" alt="EcoBites" class="footer-logo">
+      </div>
+
+      <div class="footer-col">
+        <ul class="footer-nav">
+          <li><a href="#">top</a></li>
+          <li><a href="#">概要</a></li>
+          <li><a href="#">事業内容</a></li>
+          <li><a href="#">メンバー</a></li>
+        </ul>
+      </div>
+
+      
+
+      <div class="footer-col footer-info">
+        <h3>EcoBites Info<span>エコバイツ情報</span></h3>
+        <p>
+          <strong>住所:</strong><br>
+          123-456 Eco Garden Way,<br>
+          Sustainability Village, Earth<br>
+          123-4567 エコガーデン道、<br>
+          サステナビリティ村、地球
+        </p>
+        <p>
+          <strong>メール:</strong><br>
+          hello@ecobites.dummy.jp
+        </p>
+
+        <h3>SOCIAL MEDIA</h3>
+        <div class="social-icons">
+          <span class="social-icon">Tw</span>
+          <span class="social-icon">IG</span>
+          <span class="social-icon">In</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 EcoBites Inc. All Rights Reserved. (&copy; 2026 エコバイツ株式会社. 無断転載禁止)
+    </div>
+  </footer>
+
+</body>
+</html>
+  
         <p>&copy; 2026 EcoBites Inc.</p>
     </footer>
     </head>
@@ -234,11 +398,119 @@
             }
 
             footer {
-                text-align: center;
-                padding: 20px;
-                background: #333;
-                color: #fff;
-            }
+               background-color: #f9f8f4;
+    padding: 50px 20px 20px;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.footer-container {
+    display: grid;
+    /* 3列の均等配置 */
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center; /* 縦方向も中央で揃える */
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+}
+
+/* 中央のメニューをど真ん中に配置するための設定 */
+.footer-center {
+    display: flex;
+    justify-content: center;
+}
+
+.footer h3 {
+    color: #728c4a;
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+}
+.footer h3 span {
+    font-size: 13px;
+    font-weight: normal;
+    color: #333;
+    display: block;
+}
+
+.footer-logo {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-nav li {
+    margin-bottom: 15px;
+}
+.footer-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+.footer-nav a:hover {
+    color: #728c4a;
+}
+
+.footer-info {
+    text-align: right; /* 右側の文字を右端にピシッと揃える */
+}
+.footer-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+}
+.footer-info strong {
+    font-size: 13px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end; /* アイコンも右寄せに */
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.social-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #728c4a;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #555;
+}
+
+/* ＝＝＝ スマホ対応（フッター部分のみ） ＝＝＝ */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* スマホの時は縦1列にする */
+        text-align: center;
+    }
+    .footer-info {
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+}
+            
 
             /* 全体設定 */
 
