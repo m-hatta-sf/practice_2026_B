@@ -6,6 +6,330 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoBites | 冷凍食品で地球を温める</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* 固定ヘッダー */
+        .site-header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 0;
+            position: sticky;
+            font-size: 1.5rem;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        /* ロゴ部分を横並びにする設定 */
+        .logo {
+            display: flex;
+            /* 横並びにする */
+            align-items: center;
+            /* 画像と文字の縦の真ん中を揃える */
+            gap: 10px;
+            /* 画像と「EcoBites」の間の余白（好みに合わせて調整） */
+
+            /* 前回ご質問いただいた文字の装飾もここに書くことができます */
+            font-weight: bold;
+            color: #008c8c;
+        }
+
+        .logo-mark {
+            width: 50px;
+            /* 適切なサイズに変更してください */
+            height: auto;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #ff7e5f;
+        }
+
+        /* 各セクションの共通設定 */
+        .section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #008c8c;
+        }
+
+        /* メインビジュアル */
+        .hero {
+            height: 400px;
+            background: #e0f2f1;
+            /* 爽やかなライトブルー */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* メンバーエリア */
+        .member-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .member-card {
+            text-align: center;
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .member-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #f9f8f4;
+            padding: 50px 20px 20px;
+            font-family: sans-serif;
+            color: #333;
+        }
+
+        .footer-container {
+            display: grid;
+            /* 3列の均等配置 */
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+            /* 縦方向も中央で揃える */
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 30px;
+        }
+
+        /* 中央のメニューをど真ん中に配置するための設定 */
+        .footer-center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer h3 {
+            color: #728c4a;
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            line-height: 1.4;
+        }
+
+        .footer h3 span {
+            font-size: 13px;
+            font-weight: normal;
+            color: #333;
+            display: block;
+        }
+
+        .footer-logo {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+        }
+
+        .footer-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-nav li {
+            margin-bottom: 15px;
+        }
+
+        .footer-nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .footer-nav a:hover {
+            color: #728c4a;
+        }
+
+        .footer-info {
+            text-align: right;
+            /* 右側の文字を右端にピシッと揃える */
+        }
+
+        .footer-info p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0 0 15px 0;
+        }
+
+        .footer-info strong {
+            font-size: 13px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            /* アイコンも右寄せに */
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .social-icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #728c4a;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        /* ＝＝＝ スマホ対応（フッター部分のみ） ＝＝＝ */
+        @media (max-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+                /* スマホの時は縦1列にする */
+                text-align: center;
+            }
+
+            .footer-info {
+                text-align: center;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+
+        /* 全体設定 */
+
+        /* メインビジュアル：キャッチコピーを大きく、中央寄せ */
+        .hero {
+            height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                url('https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?q=80&w=1200') no-repeat center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .catch-copy {
+            font-size: 3.5rem;
+            /* 字体を大きく */
+            font-weight: bold;
+            color: #fff;
+            line-height: 1.4;
+            /* 行間の調整 */
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            /* 文字を見やすく */
+        }
+
+        /* 事業内容：3列グリッド */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #008c8c;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .card {
+            flex: 1;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            /* 画像の角を丸めるため */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            /* 画像の比率を保ちつつ枠いっぱいに表示 */
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card h3 {
+            color: #ff7e5f;
+            margin-bottom: 10px;
+        }
+
+        /* スマホ対応：画面が狭いときは縦並びにする */
+        @media (max-width: 768px) {
+            .grid {
+                flex-direction: column;
+            }
+
+            .catch-copy {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -97,333 +421,14 @@
                     <p>誕生日：2003年10月17日天秤座</p>
                     <p>所属：システム１部１グループ２チーム</p>
                     <p>餃子を全国の皆さんに届けたいです</p>
-                </div>
             </div>
+        </div>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2026 EcoBites Inc.</p>
     </footer>
-    </head>
-
-    <head>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-
-            body {
-                font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
-                color: #333;
-                line-height: 1.8;
-            }
-
-            /* 固定ヘッダー */
-            .site-header {
-                background: rgba(255, 255, 255, 0.95);
-                padding: 15px 0;
-                position: sticky;
-                font-size: 1.5rem;
-                top: 0;
-                z-index: 1000;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            }
-
-            .header-container {
-                max-width: 1000px;
-                margin: 0 auto;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 0 20px;
-            }
-
-            /* ロゴ部分を横並びにする設定 */
-            .logo {
-                display: flex;
-                /* 横並びにする */
-                align-items: center;
-                /* 画像と文字の縦の真ん中を揃える */
-                gap: 10px;
-                /* 画像と「EcoBites」の間の余白（好みに合わせて調整） */
-
-                /* 前回ご質問いただいた文字の装飾もここに書くことができます */
-                font-weight: bold;
-                color: #008c8c;
-            }
-
-            .logo-mark {
-                width: 50px;
-                /* 適切なサイズに変更してください */
-                height: auto;
-            }
-
-            .nav ul {
-                list-style: none;
-                display: flex;
-                gap: 20px;
-            }
-
-            .nav a {
-                text-decoration: none;
-                color: #555;
-                font-weight: bold;
-                transition: color 0.3s;
-            }
-
-            .nav a:hover {
-                color: #ff7e5f;
-            }
-
-            /* 各セクションの共通設定 */
-            .section {
-                padding: 80px 20px;
-            }
-
-            .container {
-                max-width: 1000px;
-                margin: 0 auto;
-            }
-
-            h2 {
-                text-align: center;
-                margin-bottom: 40px;
-                font-size: 2rem;
-                color: #008c8c;
-            }
-
-            /* メインビジュアル */
-            .hero {
-                height: 400px;
-                background: #e0f2f1;
-                /* 爽やかなライトブルー */
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-            }
-
-            /* メンバーエリア */
-            .member-grid {
-                display: flex;
-                justify-content: center;
-                gap: 40px;
-            }
-
-            .member-card {
-                text-align: center;
-                flex: 1;
-                max-width: 300px;
-            }
-
-            .member-icon {
-                font-size: 3rem;
-                margin-bottom: 10px;
-            }
-
-            footer {
-               background-color: #f9f8f4;
-    padding: 50px 20px 20px;
-    font-family: sans-serif;
-    color: #333;
-}
-
-.footer-container {
-    display: grid;
-    /* 3列の均等配置 */
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center; /* 縦方向も中央で揃える */
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 30px;
-}
-
-/* 中央のメニューをど真ん中に配置するための設定 */
-.footer-center {
-    display: flex;
-    justify-content: center;
-}
-
-.footer h3 {
-    color: #728c4a;
-    font-size: 16px;
-    margin: 0 0 15px 0;
-    line-height: 1.4;
-}
-.footer h3 span {
-    font-size: 13px;
-    font-weight: normal;
-    color: #333;
-    display: block;
-}
-
-.footer-logo {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-}
-
-.footer-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.footer-nav li {
-    margin-bottom: 15px;
-}
-.footer-nav a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: bold;
-}
-.footer-nav a:hover {
-    color: #728c4a;
-}
-
-.footer-info {
-    text-align: right; /* 右側の文字を右端にピシッと揃える */
-}
-.footer-info p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0 0 15px 0;
-}
-.footer-info strong {
-    font-size: 13px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: flex-end; /* アイコンも右寄せに */
-    gap: 10px;
-    margin-bottom: 20px;
-}
-.social-icon {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-color: #728c4a;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 30px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 13px;
-    color: #555;
-}
-
-/* ＝＝＝ スマホ対応（フッター部分のみ） ＝＝＝ */
-@media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr; /* スマホの時は縦1列にする */
-        text-align: center;
-    }
-    .footer-info {
-        text-align: center;
-    }
-    .social-icons {
-        justify-content: center;
-    }
-}
-            
-
-            /* 全体設定 */
-
-            /* メインビジュアル：キャッチコピーを大きく、中央寄せ */
-            .hero {
-                height: 500px;
-                background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-                    url('https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?q=80&w=1200') no-repeat center/cover;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                padding: 0 20px;
-            }
-
-            .catch-copy {
-                font-size: 3.5rem;
-                /* 字体を大きく */
-                font-weight: bold;
-                color: #fff;
-                line-height: 1.4;
-                /* 行間の調整 */
-                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-                /* 文字を見やすく */
-            }
-
-            /* 事業内容：3列グリッド */
-            .section-title {
-                text-align: center;
-                font-size: 2rem;
-                color: #008c8c;
-                margin-bottom: 40px;
-            }
-
-            .grid {
-                display: flex;
-                justify-content: space-between;
-                gap: 30px;
-            }
-
-            .card {
-                flex: 1;
-                background: #fff;
-                border-radius: 12px;
-                overflow: hidden;
-                /* 画像の角を丸めるため */
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-                transition: transform 0.3s ease;
-            }
-
-            .card:hover {
-                transform: translateY(-10px);
-            }
-
-            .card-img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-                /* 画像の比率を保ちつつ枠いっぱいに表示 */
-            }
-
-            .card-body {
-                padding: 20px;
-            }
-
-            .card h3 {
-                color: #ff7e5f;
-                margin-bottom: 10px;
-            }
-
-            /* スマホ対応：画面が狭いときは縦並びにする */
-            @media (max-width: 768px) {
-                .grid {
-                    flex-direction: column;
-                }
-
-                .catch-copy {
-                    font-size: 2rem;
-                }
-                text-align: center;
-                padding: 20px;
-                background: #333;
-                color: #fff;
-            }
-        </style>
-    </head>
 
 </body>
 
